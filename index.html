@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>js tut</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+         *{box-sizing: border-box; background-color: black;}
+         .container{width: 300px;overflow: hidden;margin: 50px auto;background-color: black;}
+         .hidden{display: none;}
+         .container .box{float: left;width: 100px;height: 100px;border: 1px solid whitesmoke;background-color:black;color: whitesmoke;
+                            transition: all .25s ease-in-out;font-family: sans-serif;font-size: 85px; text-align: center;line-height: 100px; cursor:grab;}
+         .container .box:hover{background-color: #c0bfbf;} 
+         .container button{
+             background-color: #26c281; color: #f4f4f4;font-weight: bolder;
+          cursor: pointer;width: 150px; height: 40px; margin: 50px 75px;
+          animation-name: low;
+          animation-duration: 0.6s;
+            }          
+         @keyframes low{
+             from{opacity: 0;}
+             to{opacity:1;}
+         }
+        form{
+            border: chartreuse solid 1px;
+            position: absolute;
+            padding: 20px;
+            margin-left: 18%;
+            margin-right: 18%;
+            top: 100px;
+            line-height: 25px;
+            border-radius: 10px;
+            
+             
+            color: azure;
+             
+         }
+         #box1{border-top: black;border-left: black;}
+         #box2{border-top: black;}
+         #box3{border-top: black;border-right: black;}
+         #box4{border-left: black;}
+         #box6{border-right: black;}
+         #box7{border-left: black;border-bottom: black;}
+         #box8{border-bottom: black;}
+         #box9{border-right: black;border-bottom: black;}
+
+         .container .won{background-color: #f9690e;color: white;}       
+         .container .won:hover {background: #f9690e;color: white;} 
+         .container .hidden{display: none;}
+        </style>
+    </head>
+    <header>
+        <form id="form">
+            <p>Hey,<br>    Welcome to this simple yet addictive game of Tic-Tac-Toe. I hope you like this game. To start playing, enter your names and jump right into the game.<br>Do reach me in case of any feedback or suggestion for this </p><hr>
+            Player 1 : <br>
+            <input type="text" id="player1" style="color: white;" required><br>
+            Player 2:<br>
+            <input type="text" id="player2" style="color: white;"><br><br>
+            <input type="submit" id="submit" value="Let's Go Yeah!!" style="color: azure;">
+        </form>
+    </header>
+    <body>
+        <div class="container" id="main">
+            <span id="spn" style="text-align: center;display: block;font-family: sans-serif;color: white;font-size: 25px;background-color: #446cb3;margin-bottom: 35px;padding: 5px;">Start the Match</span>
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+            <div class="box" id="box9"></div>
+            <button class="hidden" id="hid" onclick="replay()">Restart the Match</button>
+        </div>
+        
+        <script src="javas.js"></script>
+        <footer style="position: fixed; bottom: 0px;">&copy; A Shivoy Dixit Production</footer>
+    </body>
+</html>
